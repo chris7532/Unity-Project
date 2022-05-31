@@ -8,9 +8,14 @@ public class HalfWayCheck : MonoBehaviour
    public GameObject HalfWay;
    public GameObject FinalWay;
 
-   void OnTriggerEnter() {
-       FinalWay.SetActive(true);
-       HalfWay.SetActive(false);
+   void OnTriggerEnter(Collider other) {
+        
+        if(other.gameObject.tag == "Player" || other.gameObject.tag == "aiCar")
+        {
+            FinalWay.SetActive(true);
+            HalfWay.SetActive(false);
+        }
+        
        
    }
 }
