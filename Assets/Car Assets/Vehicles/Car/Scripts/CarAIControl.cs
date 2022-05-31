@@ -65,7 +65,8 @@ namespace UnityStandardAssets.Vehicles.Car
             {
                 // Car should not be moving,
                 // use handbrake to stop
-                m_CarController.Move(0, 0, -1f, 1f);
+                float max_speed_limit = 0.5f;
+                m_CarController.Move(0, 0, -1f, 1f, max_speed_limit);
             }
             else
             {
@@ -169,7 +170,8 @@ namespace UnityStandardAssets.Vehicles.Car
                 float steer = Mathf.Clamp(targetAngle*m_SteerSensitivity, -1, 1)*Mathf.Sign(m_CarController.CurrentSpeed);
 
                 // feed input to the car controller.
-                m_CarController.Move(steer, accel, accel, 0f);
+                float max_speed_limit = 0.5f; 
+                m_CarController.Move(steer, accel, accel, 0f, max_speed_limit);
 
                 // if appropriate, stop driving when we're close enough to the target.
                 if (m_StopWhenTargetReached && localTarget.magnitude < m_ReachTargetThreshold)
