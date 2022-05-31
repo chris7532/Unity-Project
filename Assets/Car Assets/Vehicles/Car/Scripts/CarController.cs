@@ -383,7 +383,7 @@ namespace UnityStandardAssets.Vehicles.Car
 
         private void DetectSpeed()
         {
-            car_speed.text = "speed:" + CurrentSpeed;       
+            car_speed.text = CurrentSpeed + " km/h";       
             car_acc.text = "acc:" + AccelInput;
 
         }

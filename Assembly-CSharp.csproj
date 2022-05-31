@@ -47,6 +47,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Car Assets\Vehicles\Car\Scripts\CarDamage.cs" />
      <Compile Include="Assets\Script\CarWayControl.cs" />
      <Compile Include="Assets\Car Assets\Vehicles\Car\Scripts\WheelEffects.cs" />
      <Compile Include="Assets\Car Assets\Vehicles\Car\Scripts\CarSelfRighting.cs" />
@@ -650,7 +651,6 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.30f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
-<<<<<<< HEAD
  <HintPath>C:/Users/machi/2022.05.28_unity_project/Unity-Project/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
@@ -679,36 +679,6 @@
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Users/machi/2022.05.28_unity_project/Unity-Project/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-=======
- <HintPath>C:/Users/ASUS/unitygithub/Unity-Project/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/ASUS/unitygithub/Unity-Project/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.VisualStudio.Editor">
- <HintPath>C:/Users/ASUS/unitygithub/Unity-Project/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/Users/ASUS/unitygithub/Unity-Project/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Timeline">
- <HintPath>C:/Users/ASUS/unitygithub/Unity-Project/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/ASUS/unitygithub/Unity-Project/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/ASUS/unitygithub/Unity-Project/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.PlasticSCM.Editor">
- <HintPath>C:/Users/ASUS/unitygithub/Unity-Project/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Rider.Editor">
- <HintPath>C:/Users/ASUS/unitygithub/Unity-Project/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/ASUS/unitygithub/Unity-Project/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
->>>>>>> 941b2d47f79e0cd5e1a6dcd82f6944e78423aec3
  </Reference>
   </ItemGroup>
   <ItemGroup>
