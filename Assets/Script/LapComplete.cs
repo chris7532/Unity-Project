@@ -22,21 +22,23 @@ public class LapComplete : MonoBehaviour
     void Start() {
         LapTimeRecord = new List<float>();
     }
-    void OnTriggerEnter(){
+    void OnTriggerEnter(Collider other){
 
-        
-        Debug.Log("Complete time: "+ LapTimer.CurrentTime);
-        LapTimeRecord.Add(LapTimer.CurrentTime);
-        bestTime = findMin(LapTimeRecord);
-        TimeSpan time = TimeSpan.FromSeconds(bestTime);
-        BestBox.GetComponent<Text>().text = time.ToString("mm':'ss'.'fff");
-        LapTimer.CurrentTime = 0;
-        LapCount +=1;
-        LapBox.GetComponent<Text>().text = "Laps: "+LapCount.ToString();
-        FinalWay.SetActive(false);
-        HalfWay.SetActive(true);
+        if(other.gameObject.tag == "aiCar" || other.gameObject.tag == "Player") { 
 
-
+            Debug.Log("Complete time: "+ LapTimer.CurrentTime);
+            LapTimeRecord.Add(LapTimer.CurrentTime);
+            bestTime = findMin(LapTimeRecord);
+            TimeSpan time = TimeSpan.FromSeconds(bestTime);
+            BestBox.GetComponent<Text>().text = time.ToString("mm':'ss'.'fff");
+            LapTimer.CurrentTime = 0;
+            LapCount +=1;
+            LapBox.GetComponent<Text>().text = LapCount.ToString();
+            FinalWay.SetActive(false);
+            HalfWay.SetActive(true);
+     
+        }
+            
     }
     float findMin(List<float> LapTimeRecord){
         float min = 10000.0f;
