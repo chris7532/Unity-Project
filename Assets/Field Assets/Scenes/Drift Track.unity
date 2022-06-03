@@ -26585,6 +26585,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.54553366, y: 2.0000005, z: 1.0000005}
   m_Center: {x: 0.0073753195, y: 0.000025422263, z: 0.000010050338}
+--- !u!198 &441581818 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4386393934202844814, guid: 8b529144aad05a345b8670c9d0598f6a, type: 3}
+  m_PrefabInstance: {fileID: 527883317}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &442886012
 GameObject:
   m_ObjectHideFlags: 0
@@ -123049,6 +123054,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400022, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
+      propertyPath: speed_line
+      value: 
+      objectReference: {fileID: 441581818}
     - target: {fileID: 19800000, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
       propertyPath: InitialModule.startSizeY.minMaxState
       value: 3
