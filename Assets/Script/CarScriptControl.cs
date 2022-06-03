@@ -11,8 +11,8 @@ public class CarScriptControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CarControl.GetComponent<CarController>().enabled = true;
-        BotCarControl.GetComponent<CarController>().enabled = true;
+        CarControl.GetComponent<CarUserControl>().enabled = true;
+        BotCarControl.GetComponent<CarAIControl>().enabled = true;
     }
 
     

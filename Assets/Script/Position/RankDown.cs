@@ -11,6 +11,7 @@ public class RankDown : MonoBehaviour
         if (other.gameObject.tag == "CarPos")
         {
             RankUI.GetComponent<Text>().text = "2nd Place";
+            LapComplete.RelativeRank = 2;
         }
     }
 }

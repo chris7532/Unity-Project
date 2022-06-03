@@ -10,7 +10,7 @@ public class HalfWayCheck : MonoBehaviour
 
    void OnTriggerEnter(Collider other) {
         
-        if(other.gameObject.tag == "Player" || other.gameObject.tag == "aiCar")
+        if(other.gameObject.tag == "PlayerCar")
         {
             FinalWay.SetActive(true);
             HalfWay.SetActive(false);

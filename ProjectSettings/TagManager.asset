@@ -6,6 +6,7 @@ TagManager:
   tags:
   - aiCar
   - CarPos
+  - PlayerCar
   layers:
   - Default
   - TransparentFX
