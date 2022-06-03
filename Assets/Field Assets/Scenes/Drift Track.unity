@@ -46495,6 +46495,36 @@ Transform:
   m_Father: {fileID: 1700503368}
   m_RootOrder: 91
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &777051333
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 777051334}
+  m_Layer: 0
+  m_Name: FindMergeConflict
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &777051334
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777051333}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 34
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &777075930
 GameObject:
   m_ObjectHideFlags: 0
@@ -59968,7 +59998,6 @@ MonoBehaviour:
   BotCar: {fileID: 1399509480}
   Canvas: {fileID: 6133696}
   FinishCanvas: {fileID: 1923686587}
-  SpeedParticle: {fileID: 1576890224}
   FinalMusic: {fileID: 1084385070}
   AllAudio: []
   AllPlayerAudio: []
@@ -80496,7 +80525,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1358544826}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.593815, y: -22.74353, z: 20.417507}
+  m_LocalPosition: {x: 19.34, y: 0.94, z: 57.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -91690,11 +91719,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1576735956}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!198 &1576890224 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 4386393934202844814, guid: 8b529144aad05a345b8670c9d0598f6a, type: 3}
-  m_PrefabInstance: {fileID: 527883317}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1578610087
 GameObject:
   m_ObjectHideFlags: 0
@@ -123019,7 +123043,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11400022, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11400024, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
       propertyPath: m_Enabled
