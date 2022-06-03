@@ -12,7 +12,7 @@ public class FinishGame : MonoBehaviour
     public GameObject BotCar;
     public GameObject Canvas;
     public GameObject FinishCanvas;
-    //public ParticleSystem SpeedParticle;
+    public ParticleSystem SpeedParticle;
     public AudioSource FinalMusic;
     public Component[] AllAudio;
     public Component[] AllPlayerAudio;
@@ -44,7 +44,7 @@ public class FinishGame : MonoBehaviour
         {
             Destroy(a);
         }
-        //SpeedParticle.Stop();
+        SpeedParticle.Stop();
         Canvas.SetActive(false);
         FinishCanvas.SetActive(true);
         BotCar.SetActive(true);

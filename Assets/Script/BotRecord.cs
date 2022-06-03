@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityStandardAssets.Vehicles.Car;
 
 public class BotRecord : MonoBehaviour
 {
@@ -34,6 +35,7 @@ public class BotRecord : MonoBehaviour
                 PlayerPrefs.SetFloat("BotBestTime", BotBestTime);
                 BotTotalTime = TotalLapTime(BotLapTimeRecord);
                 PlayerPrefs.SetFloat("BotTotalTime", BotTotalTime);
+                CarController.m_Topspeed = 0.0f;
             }
             BotTimer.CurrentTime = 0;            
             //BotFinalWay.SetActive(false);
