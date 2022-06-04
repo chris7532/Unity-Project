@@ -40,6 +40,8 @@ public class CountDown : MonoBehaviour
 
         CountDownUI.GetComponent<Text>().text = "GO!";
         GoAudio.Play();
+        // background music start
+
         CountDownUI.SetActive(true);
         CarScriptControl.SetActive(true);
         yield return new WaitForSeconds(1);

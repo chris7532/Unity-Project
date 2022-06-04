@@ -45,6 +45,8 @@ public class FinishGame : MonoBehaviour
             Destroy(a);
         }
         SpeedParticle.Stop();
+        //background Music stop
+
         Canvas.SetActive(false);
         FinishCanvas.SetActive(true);
         BotCar.SetActive(true);

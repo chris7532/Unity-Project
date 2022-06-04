@@ -36,6 +36,7 @@ public class BotRecord : MonoBehaviour
                 BotTotalTime = TotalLapTime(BotLapTimeRecord);
                 PlayerPrefs.SetFloat("BotTotalTime", BotTotalTime);
                 CarController.m_Topspeed = 0.0f;
+
             }
             BotTimer.CurrentTime = 0;            
             //BotFinalWay.SetActive(false);
