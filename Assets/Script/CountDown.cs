@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class CountDown : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -12,14 +13,27 @@ public class CountDown : MonoBehaviour
     public GameObject CarScriptControl;
     public GameObject CountDownUI;
 
+    public Camera first_surround_camera;
+    public Camera second_user_camera;
+
     void Start()
     {
         StartCoroutine(StartCountDown());
+
     }
 
     
     IEnumerator StartCountDown()
     {
+
+
+
+
+
+        yield return new WaitForSeconds(7);
+        first_surround_camera.enabled = false;
+        second_user_camera.enabled = true;
+
         CountDownUI.GetComponent<Text>().text = "3";
         CountAudio.Play();
         CountDownUI.SetActive(true);

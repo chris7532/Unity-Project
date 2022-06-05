@@ -378,9 +378,10 @@ namespace UnityStandardAssets.Vehicles.Car
 
         private void Update()
         {
-            DetectSpeed();
+            //DetectSpeed();
         }
 
+        /**
         private void DetectSpeed()
         {
             car_speed.text = CurrentSpeed + " km/h";       
@@ -401,7 +402,7 @@ namespace UnityStandardAssets.Vehicles.Car
                     AccelInput = 2;
                     break;
             }
-        }
+        }**/
 
 
 
