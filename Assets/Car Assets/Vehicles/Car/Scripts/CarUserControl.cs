@@ -9,6 +9,8 @@ namespace UnityStandardAssets.Vehicles.Car
     {
         private CarController m_Car; // the car controller we want to use
         float max_speed_limit = 0.5f;
+        [SerializeField] ParticleSystem speed_line;
+        Gradient grad = new Gradient();
 
         private void Awake()
         {
@@ -39,6 +41,17 @@ namespace UnityStandardAssets.Vehicles.Car
             float thrustTorque;
             if (touch_acc.gameObject.name == "acc_cube")
             {
+                var col = speed_line.colorOverLifetime;
+                var shape = speed_line.shape;
+                var emission = speed_line.emission;
+
+                //Color Over Lifetime
+                grad.SetKeys(new GradientColorKey[] { new GradientColorKey(new Color(0.82f, 0.078f, 0.015f, 1), 0.0f), new GradientColorKey(Color.white, 1.0f) }, new GradientAlphaKey[] { new GradientAlphaKey(1.0f, 0.0f), new GradientAlphaKey(0.0f, 1.0f) });
+
+                col.color = grad;
+                shape.radius = 11.5f;
+                emission.rateOverTime = 500;
+
                 Debug.Log("acc");
                 float h = CrossPlatformInputManager.GetAxis("Horizontal");
                 float v = CrossPlatformInputManager.GetAxis("Vertical");
@@ -61,6 +74,14 @@ namespace UnityStandardAssets.Vehicles.Car
         }
         private void OnTriggerExit(Collider touch_acc)
         {
+            var col = speed_line.colorOverLifetime;
+            var shape = speed_line.shape;
+            var emission = speed_line.emission;
+            grad.SetKeys(new GradientColorKey[] { new GradientColorKey(new Color(0.17f, 0.58f, 1, 1), 0.0f), new GradientColorKey(Color.white, 1.0f) }, new GradientAlphaKey[] { new GradientAlphaKey(1.0f, 0.0f), new GradientAlphaKey(0.0f, 1.0f) });
+            col.color = grad;
+            shape.radius = 13;
+            emission.rateOverTime = 125;
+
             Debug.Log("exit");
             max_speed_limit = 0.5f;
         }
