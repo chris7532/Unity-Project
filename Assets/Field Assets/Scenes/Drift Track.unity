@@ -55747,6 +55747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BotFinalWay: {fileID: 930795070}
+  BotCar: {fileID: 1399509480}
   BotLapCount: 0
   BotLapTimeRecord: []
 --- !u!65 &930795072
@@ -80603,7 +80604,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1358544827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108626,7 +108627,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: MainUI
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1846268275
@@ -114412,7 +114413,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1932451378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119201,6 +119202,8 @@ MonoBehaviour:
   CountDownUI: {fileID: 24616661}
   first_surround_camera: {fileID: 744338486}
   second_user_camera: {fileID: 1448829737}
+  Timer: {fileID: 1358544826}
+  TimerAI: {fileID: 1932451377}
 --- !u!4 &2029127530
 Transform:
   m_ObjectHideFlags: 0

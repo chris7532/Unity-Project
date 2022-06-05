@@ -44,15 +44,14 @@ public class FinishGame : MonoBehaviour
         {
             Destroy(a);
         }
+        BotCar.SetActive(true);
         SpeedParticle.Stop();
         //background Music stop
-
         Canvas.SetActive(false);
         FinishCanvas.SetActive(true);
-        BotCar.SetActive(true);
+        
         //camera change to finish rotate
         FinishCube.SetActive(true);
-        FinalMusic.loop = true;
         FinalMusic.Play();
         yield return new WaitForSeconds(1.5f);
         CarController.m_Topspeed = 200;

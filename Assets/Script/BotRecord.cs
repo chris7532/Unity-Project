@@ -8,6 +8,7 @@ using UnityStandardAssets.Vehicles.Car;
 public class BotRecord : MonoBehaviour
 {
     public GameObject BotFinalWay;
+    public GameObject BotCar;
     public int BotLapCount;
     public List<float> BotLapTimeRecord;
     private float BotBestTime;
@@ -35,13 +36,16 @@ public class BotRecord : MonoBehaviour
                 PlayerPrefs.SetFloat("BotBestTime", BotBestTime);
                 BotTotalTime = TotalLapTime(BotLapTimeRecord);
                 PlayerPrefs.SetFloat("BotTotalTime", BotTotalTime);
+                BotCar.SetActive(false);
                 CarController.m_Topspeed = 0.0f;
-
+                BotCar.GetComponent<CarAIControl>().enabled = false;
+                BotCar.GetComponent<CarController>().enabled = false;
+                BotFinalWay.SetActive(false);
+                BotCar.SetActive(true);
             }
             BotTimer.CurrentTime = 0;            
-            //BotFinalWay.SetActive(false);
             BotFinalWay.GetComponent<BoxCollider>().enabled = false;
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(3);
             BotFinalWay.GetComponent<BoxCollider>().enabled = true;
         }
     }

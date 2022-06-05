@@ -15,14 +15,17 @@ public class LapTimer : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
-        
+        CurrentTime = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+   
         CurrentTime += Time.deltaTime;
         TimeSpan time = TimeSpan.FromSeconds(CurrentTime);
         TimeBox.GetComponent<Text>().text = time.ToString("mm':'ss'.'fff");
     }
+
+    
 }

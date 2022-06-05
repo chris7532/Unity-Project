@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityStandardAssets.Vehicles.Car;
 
 public class CountDown : MonoBehaviour
 {
@@ -16,8 +16,11 @@ public class CountDown : MonoBehaviour
     public Camera first_surround_camera;
     public Camera second_user_camera;
 
+    public GameObject Timer;
+    public GameObject TimerAI;
     void Start()
     {
+        CarController.m_Topspeed = 200;
         StartCoroutine(StartCountDown());
 
     }
@@ -25,10 +28,6 @@ public class CountDown : MonoBehaviour
     
     IEnumerator StartCountDown()
     {
-
-
-
-
 
         yield return new WaitForSeconds(7);
         first_surround_camera.enabled = false;
@@ -54,6 +53,9 @@ public class CountDown : MonoBehaviour
 
         CountDownUI.GetComponent<Text>().text = "GO!";
         GoAudio.Play();
+        //Timer enabled
+        Timer.SetActive(true);
+        TimerAI.SetActive(true);
         // background music start
 
         CountDownUI.SetActive(true);

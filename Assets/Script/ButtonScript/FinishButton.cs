@@ -14,6 +14,7 @@ public class FinishButton : MonoBehaviour
     {
         
         SceneManager.LoadScene(sceneName);
+        PlayerPrefs.DeleteAll();
 
     }
     public void QuitGame()

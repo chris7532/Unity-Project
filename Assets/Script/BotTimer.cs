@@ -12,12 +12,14 @@ public class BotTimer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        CurrentTime = 0;
         StartCoroutine(WaitForStart());
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         CurrentTime += Time.deltaTime;
         TimeSpan time = TimeSpan.FromSeconds(CurrentTime);
         
