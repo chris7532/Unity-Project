@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+
 public class MainUIScript : MonoBehaviour
 {
     public AudioSource soundPlayer;
@@ -34,6 +35,12 @@ public class MainUIScript : MonoBehaviour
     private void ClickDifficulty()
     {
         soundPlayer.Play();
+        StartCoroutine(Wait());
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(0.15f);
         SceneManager.LoadScene("Difficulty");
     }
 
