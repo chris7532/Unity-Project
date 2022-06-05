@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Field Assets/Scenes/Drift Track.unity
     guid: e82a0c7cf6aa6504daa551b17979d57e
+  - enabled: 1
+    path: Assets/Field Assets/Scenes/Difficulty.unity
+    guid: 664e46426f2ffd6418e59554e633a17a
+  - enabled: 1
+    path: Assets/Field Assets/Scenes/MainUI.unity
+    guid: 3fefcecc23008874f895236d9ced8cd4
   m_configObjects: {}

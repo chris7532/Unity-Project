@@ -61,11 +61,5 @@ public class CountDown : MonoBehaviour
         yield return new WaitForSeconds(1);
         CountDownUI.SetActive(false);
 
-
-
-
     }
-
-
-
 }
