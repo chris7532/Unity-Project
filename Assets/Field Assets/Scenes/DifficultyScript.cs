@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class DifficultyScript : MonoBehaviour
 {
     public static int difficulty; 
+    public AudioSource soundPlayer;
     public Button btnEasy;
     public Button btnHard;
 
@@ -26,12 +27,14 @@ public class DifficultyScript : MonoBehaviour
 
     private void ClickEasy()
     {
+        soundPlayer.Play();
         difficulty = 0;
         SceneManager.LoadScene("MainUI");
     }
 
     private void ClickHard()
     {
+        soundPlayer.Play();
         difficulty = 1;
         SceneManager.LoadScene("MainUI");
     }
