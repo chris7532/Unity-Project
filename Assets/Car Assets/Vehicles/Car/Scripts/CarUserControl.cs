@@ -38,7 +38,7 @@ namespace UnityStandardAssets.Vehicles.Car
 
         private void OnTriggerStay(Collider touch_acc)
         {
-            float thrustTorque;
+            //float thrustTorque;
             if (touch_acc.gameObject.name == "acc_cube")
             {
                 var col = speed_line.colorOverLifetime;
