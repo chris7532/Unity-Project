@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class DifficultyScript : MonoBehaviour
 {
-    public static int difficulty=0; 
+    public static int difficulty = 0; 
     public AudioSource soundPlayer;
     public Button btnEasy;
     public Button btnHard;
