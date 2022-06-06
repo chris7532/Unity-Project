@@ -66,7 +66,7 @@ namespace UnityStandardAssets.Vehicles.Car
             if (DifficultyScript.difficulty == 1)
             {
                 Debug.Log("Hard mode");
-                max_speed_limit = 0.95f;
+                max_speed_limit = 0.8f;
             }
             else
             {
@@ -136,6 +136,7 @@ namespace UnityStandardAssets.Vehicles.Car
                             if (m_Target.GetComponent<CarWayControl>().MarkNumber == 1) {
                                 desiredSpeed -= 30;
                             }
+                            
                             break;
                         }
 
