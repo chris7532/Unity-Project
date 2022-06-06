@@ -20,7 +20,14 @@ public class CarWayControl : MonoBehaviour
     public GameObject Mark14;
     public GameObject Mark15;
     public GameObject Mark16;
+    public GameObject Mark17;
+    public GameObject Mark18;
+    public GameObject Mark19;
+    public GameObject Mark20;
+    public GameObject Mark21;
+    public GameObject Mark22;
 
+    public GameObject BotCar;
     public IDictionary<int, GameObject> MarkMap;
     public GameObject Tracker;
     public int MarkNumber;      //更新當前Tracker
@@ -45,6 +52,12 @@ public class CarWayControl : MonoBehaviour
         MarkMap.Add(13, Mark14);
         MarkMap.Add(14, Mark15);
         MarkMap.Add(15, Mark16);
+        MarkMap.Add(16, Mark17);
+        MarkMap.Add(17, Mark18);
+        MarkMap.Add(18, Mark19);
+        MarkMap.Add(19, Mark20);
+        MarkMap.Add(20, Mark21);
+        MarkMap.Add(21, Mark22);
     }
 
     // Update is called once per frame
@@ -52,6 +65,7 @@ public class CarWayControl : MonoBehaviour
     {
 
         Tracker.transform.position = MarkMap[MarkNumber].transform.position;
+        
     }
     IEnumerator OnTriggerEnter(Collider collision)
     {
@@ -61,7 +75,7 @@ public class CarWayControl : MonoBehaviour
             Debug.Log(MarkNumber + 1);
             this.GetComponent<BoxCollider>().enabled = false;
             MarkNumber += 1;
-            if (MarkNumber == 16)
+            if (MarkNumber == 22)
             {
                 MarkNumber = 0;
             }

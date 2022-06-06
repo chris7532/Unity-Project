@@ -133,6 +133,9 @@ namespace UnityStandardAssets.Vehicles.Car
                                 Mathf.InverseLerp(0, m_CautiousMaxAngle, spinningAngle), distanceCautiousFactor);
                             desiredSpeed = Mathf.Lerp(m_CarController.MaxSpeed, m_CarController.MaxSpeed*m_CautiousSpeedFactor,
                                                       cautiousnessRequired);
+                            if (m_Target.GetComponent<CarWayControl>().MarkNumber == 1) {
+                                desiredSpeed -= 30;
+                            }
                             break;
                         }
 
