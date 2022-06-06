@@ -26,7 +26,7 @@ public class BotTimer : MonoBehaviour
     }
     public IEnumerator WaitForStart()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(20);
         BotFinalWay.SetActive(true);
     }
 

@@ -45,6 +45,9 @@ namespace UnityStandardAssets.Vehicles.Car
         private float m_AvoidOtherCarSlowdown;    // how much to slow down due to colliding with another car, whilst avoiding
         private float m_AvoidPathOffset;          // direction (-1 or 1) in which to offset path to avoid other car, whilst avoiding
         private Rigidbody m_Rigidbody;
+        public float max_speed_limit = 0.5f;
+
+
 
 
         private void Awake()
@@ -58,23 +61,26 @@ namespace UnityStandardAssets.Vehicles.Car
             m_Rigidbody = GetComponent<Rigidbody>();
         }
 
+        private void Start()
+        {
+            if (DifficultyScript.difficulty == 1)
+            {
+                Debug.Log("Hard mode");
+                max_speed_limit = 0.95f;
+            }
+            else
+            {
+                Debug.Log("Easy mode");
+            }
+        }
+
 
         private void FixedUpdate()
         {
             if (m_Target == null || !m_Driving)
             {
                 // Car should not be moving,
-                // use handbrake to stop
-                float max_speed_limit = 0.5f;
-                if (DifficultyScript.difficulty == 1)
-                {
-                    Debug.Log("Hard mode");
-                    max_speed_limit = 1f;
-                }
-                else
-                {
-                    Debug.Log("Easy mode");
-                }
+                // use handbrake to stop            
 
                 m_CarController.Move(0, 0, -1f, 1f, max_speed_limit);
             }
@@ -179,18 +185,8 @@ namespace UnityStandardAssets.Vehicles.Car
                 // get the amount of steering needed to aim the car towards the target
                 float steer = Mathf.Clamp(targetAngle*m_SteerSensitivity, -1, 1)*Mathf.Sign(m_CarController.CurrentSpeed);
 
-                // feed input to the car controller.
-                float max_speed_limit = 0.5f;
+                // feed input to the car controller.       
 
-                if (DifficultyScript.difficulty == 1)
-                {
-                    Debug.Log("Hard mode");
-                    max_speed_limit = 1f;
-                }
-                else
-                {
-                    Debug.Log("Easy mode");
-                }
                 m_CarController.Move(steer, accel, accel, 0f, max_speed_limit);
 
                 // if appropriate, stop driving when we're close enough to the target.

@@ -42,6 +42,7 @@ public class BotRecord : MonoBehaviour
                 BotCar.GetComponent<CarController>().enabled = false;
                 BotFinalWay.SetActive(false);
                 BotCar.SetActive(true);
+                CarController.m_Topspeed = 200;
             }
             BotTimer.CurrentTime = 0;            
             BotFinalWay.GetComponent<BoxCollider>().enabled = false;
