@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class DifficultyScript : MonoBehaviour
 {
-    public static int difficulty; 
+    public static int difficulty=0; 
     public AudioSource soundPlayer;
     public Button btnEasy;
     public Button btnHard;
@@ -27,15 +27,21 @@ public class DifficultyScript : MonoBehaviour
 
     private void ClickEasy()
     {
-        soundPlayer.Play();
+        
         difficulty = 0;
-        SceneManager.LoadScene("MainUI");
+        StartCoroutine(Wait());
     }
 
     private void ClickHard()
     {
-        soundPlayer.Play();
         difficulty = 1;
+        StartCoroutine(Wait());
+    }
+
+    IEnumerator Wait()
+    {
+        soundPlayer.Play();
+        yield return new WaitForSeconds(0.15f);
         SceneManager.LoadScene("MainUI");
     }
 }

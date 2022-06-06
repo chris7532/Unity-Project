@@ -466,6 +466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundPlayer: {fileID: 1949676723}
+  m_MyText: {fileID: 1352991322}
   btnStar: {fileID: 2097642251}
   btnDifficulty: {fileID: 143247972}
   btnSetting: {fileID: 691950574}

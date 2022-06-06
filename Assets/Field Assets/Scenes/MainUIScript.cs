@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
+using TMPro;
 
 public class MainUIScript : MonoBehaviour
 {
     public AudioSource soundPlayer;
+    public TextMeshProUGUI m_MyText;
     public Button btnStar;
     public Button btnDifficulty;
     public Button btnSetting;
@@ -15,6 +16,13 @@ public class MainUIScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(DifficultyScript.difficulty==0){
+            m_MyText.SetText("Preview - Easy");
+        }
+        else{
+            m_MyText.SetText("Preview - Hard");
+        }
+
         btnStar.onClick.AddListener(ClickStart);
         btnDifficulty.onClick.AddListener(ClickDifficulty);
         btnSetting.onClick.AddListener(ClickSetting);
